@@ -9,6 +9,7 @@ This was built to work mostly out of the box with Netlify. Otherwise you'll need
 1. Choose "Fork > Create a new fork" from the button in the top right.
 2. In your forked repository make the following changes:
    - Copy [example.config.json](./example.config.json) to `config.json` and update it with your club's details and traits.
+   - Commit these changes to your repository's main branch
 
 #### If you're using Netlify
 
