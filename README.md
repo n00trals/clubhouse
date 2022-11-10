@@ -20,7 +20,7 @@ This was built to work mostly out of the box with Netlify. Otherwise you'll need
    - Branch to deploy: main
    - Build command: yarn build
    - Publish directory: build
-5. Click "Deploy site" NOTE THAT THIS WILL FAIL
+5. Click "Deploy site" **NOTE THAT THIS WILL FAIL**
 6. Go back to your Netlify site overview
 7. Click "Site settings"
 8. Change site name (note that this name will be used for all your Netlify URLs in the following steps).
