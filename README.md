@@ -7,7 +7,7 @@ This is the source of [https://n00trals.xyz](https://n00trals.xyz).
 This was built to work mostly out of the box with Netlify. Otherwise you'll need familiarity with building Javascript packages. We also recommend picking up a cheap domain at [Namecheap](https://www.namecheap.com/).
 
 1. Choose "Fork > Create a new fork" from the button in the top right.
-2. In your forked repository make the following changes and commit them.
+2. In your forked repository make the following changes:
    - Copy [example.config.json](./example.config.json) to `config.json` and update it with your club's details and traits.
 
 #### If you're using Netlify
@@ -19,7 +19,13 @@ This was built to work mostly out of the box with Netlify. Otherwise you'll need
    - Branch to deploy: main
    - Build command: yarn build
    - Publish directory: build
-5. Click "Show advanced" and add the following environmental variable
+5. Click "Deploy site" NOTE THAT THIS WILL FAIL
+6. Go back to your Netlify site overview
+7. Click "Site settings"
+8. Change site name (note that this name will be used for all your Netlify URLs in the following steps).
+9. In the left navigation choose "Environment variables".
+10. Click "Add a variable".
+11. Click "Show advanced" and add the following environmental variable
    - Key: `PUBLIC_URL`
    - Scopes: All scopes
    - Values: Different value for each deploy context
@@ -28,7 +34,8 @@ This was built to work mostly out of the box with Netlify. Otherwise you'll need
      - Add a branch value
        - Branch name: `development`
        - Value for branch development: the development URL of your club (eg. https://development--n00trals.netlify.app/)
-6. Click "Deploy site".
+12. Go to the Deploys tab in the top navigation.
+13. Click "Trigger deploy" > "Deploy site".
 
 
 #### Without Netlify
