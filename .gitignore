@@ -1,8 +1,11 @@
+config.json
+src/assets/json/members.json
+.env
+.env.development
+
 build
 coverage
 node_modules
-.env
-.env.development
 .npmrc
 
 yarn-debug.log
