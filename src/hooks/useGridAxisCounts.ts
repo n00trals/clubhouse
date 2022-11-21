@@ -1,12 +1,5 @@
-import {
-  GRID_CARD_HEIGHT,
-  GRID_CARD_WIDTH,
-  GRID_MX,
-  GRID_MY,
-  LAYOUT_GRID_BASE,
-  MAX_GRID_COLUMNS,
-  MIN_GRID_WIDTH,
-} from 'config/sizes';
+import { GRID_CARD_HEIGHT, GRID_CARD_WIDTH, GRID_MX, GRID_MY, MAX_GRID_COLUMNS, MIN_GRID_WIDTH } from 'config/sizes';
+import { getColumnWidth, getRowHeight } from 'utils/size';
 
 export type UseGridAxisCountsProps = {
   cardHeight?: number;
@@ -37,8 +30,8 @@ export const useGridAxisCounts = ({
   mx = GRID_MX,
   my = GRID_MY,
 }: UseGridAxisCountsProps): UseGridAxisCountsResponse => {
-  const columnWidth = cardWidth + mx * LAYOUT_GRID_BASE * 2;
-  const rowHeight = cardHeight + my * LAYOUT_GRID_BASE * 2;
+  const columnWidth = getColumnWidth({ cardWidth, mx });
+  const rowHeight = getRowHeight({ cardHeight, my });
 
   // subtract 1px because if prevents scrollbars
   const gridWidth = Math.max(columnWidth, containerWidth, cardWidth, minWidth) - 1;
